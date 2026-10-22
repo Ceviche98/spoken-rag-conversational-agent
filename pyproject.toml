@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spoken-rag-conversational-agent"
+version = "0.1.0"
+description = "Spoken Retrieval-Augmented Generation Conversational QA Agent"
+authors = [{ name = "Oscar Moreno", email = "omorenoveliz@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.30.0",
+    "numpy>=1.22.0",
+    "pandas>=1.5.0",
+    "scipy>=1.9.0",
+    "matplotlib>=3.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
